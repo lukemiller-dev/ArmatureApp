@@ -1,18 +1,57 @@
 <template>
-    <nav>
-      <ul>
-         <li repeat.for = "row of router.navigation">
-            <a href.bind = "row.href">${row.title}</a>
-         </li>
-      </ul>
-   </nav>
+  
+    <form style="
+    height:60px; 
+    width:100%;
+    background-color: #8BC34A;
+    margin-top: 0;
+    "  class="navbar-form navbar-left" role="search">
+  
+  <div style="margin-top: 5px;" class="form-group">
+      <img  src="http://i.imgur.com/hefSUNd.png" height="50" />
+    <input style="margin-left:50px;" type="text" class="form-control" placeholder="Search">
+  </div>
+  <button style="margin-top: 5.5px;" type="submit" class="btn btn-default">Submit</button>
+   
+  <i style="font-size: 35px; margin-top: 13.5px; margin-right: 40px; color:#fff" class="fa fa-user-circle nav navbar-nav navbar-right" aria-hidden="true"></i>
 
-        
+</form>
+<div css.bind="emptyNav">
+  <div class="sideNav" style="background-color:#fff; float:left; height: 50px; width: 200px; margin-top: -8px; border-right: 1px solid lightgray; border-bottom: 1px solid lightgray">
+    <p css.bind="messages"><i style="color: #fff;background-color: orange;border-radius: 100%;height: 30px;width: 31px;margin-top: 10px; padding-top: 6px; margin-right:10px;"  class="fa fa-bell" aria-hidden="true"></i>1 Messages</p>
+  </div>
 
-	
+</div>
+
+<div class="row">
+  <div class="col-md-2 col-sm-2 col-xs-2">
+
+<div css.bind="sideNav">
+<p css.bind="pStyle">Dashboard</p>
+</div>
+
+<div css.bind="sideNav">
+<p css.bind="pStyle">Processes</p>
+</div>
+
+<div css.bind="sideNavActive">
+  <p css.bind="pStyle">Organizations</p>
+</div>
+
+<div css.bind="sideNav">
+<p css.bind="pStyle">People</p>
+</div>
+
+  </div>
+  
+<div class="col-md-10 col-sm-10 col-xs-10">
+      
+
+</div>
+
    <router-view>
-      
-      
+   
 
    </router-view>
+   </div>
 </template>
