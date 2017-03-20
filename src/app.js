@@ -24,8 +24,8 @@ export class App {
 
 //AddNRemoveOrg
      constructor() {
-        this.heading = "View Organization";
-        this.heading2 ="Create Organization";
+        this.viewH = "View Organization";
+        this.createH ="Create an new Organization";
         this.heading3 = "View Organization2";
         this.organizations = [];
         this.orgName = '';
@@ -34,28 +34,61 @@ export class App {
         this.orgCity = '';
         this.orgState = '';
         this.orgZipCode = '';
+        this.storage = [];
 
+           for (var i = 0; i < localStorage.length; i++){
+                        var output = localStorage.getItem(localStorage.key(i));
+                       this.storage = JSON.parse(output);
 
+                        
+                    }
+        
            
      }
 
 
      addOrg() {
+
+       let inLS;
          if(this.orgName) {
              this.organizations.push(new Organization(this.orgName, this.orgAddress, this.orgAddress2, this.orgCity, this.orgState, this.orgZipCode));
-              console.log(this.organizations);
+      
+
+
+               let organizations = this.organizations;
+
+               
+           let retrievedData = localStorage.getItem("organizations");
+           if(retrievedData == null) {
+             inLS = [];
+           } 
+           else {
+            
+           inLS = JSON.parse(retrievedData);
+           };
+
+           inLS.push(new Organization(this.orgName, this.orgAddress, this.orgAddress2, this.orgCity, this.orgState, this.orgZipCode));
+             
+           let inLSstring = JSON.stringify(inLS);
+
+           localStorage.setItem("organizations", inLSstring);
+             
+               
+
+                  
+
              this.orgName = '';
              this.orgAddress = '';
              this.orgAddess2 = '';
              this.orgCity = '';
              this.orgState = '';
-             this.orgZipCode = '';                   
+             this.orgZipCode = ''; 
+             
          }       
-          let organizations = this.organizations;
-          localStorage.setItem("organizations", JSON.stringify(organizations));
-            let retrievedData = localStorage.getItem("organizations");
-             var organization2 = JSON.parse(retrievedData);  
+        
      }
+
+
 
     
     
@@ -66,58 +99,24 @@ export class App {
          }
      } 
 
-     messages = {
-       color: 'lightslategray',
-       'font-size': '1.2em',
-       'text-align': 'center'
-    
+
+     navSlider() {
+       $('#user').click(function () {
+   
+         $('.userNav').toggleClass('userNavActive');
+       });
      }
 
-     pStyle = {
-       color: 'lightslategray',
-       'font-size': '1.2em',
-       'text-align': 'center',
-       'padding-top': '12px',
-       'font-family':'arial',
-      
-     }; 
+  
+     optionSelect() {
+       $('.optionBtn').click(function () {
+         console.log("test");
+          $(this).toggleClass('optionBtnActive');
+       })
+     }
 
 
-     emptyNav = {
-       'background-color': '#fff',
-       'height': '110px',
-       'width': '100%',
-       'border-bottom': '1px solid lightgray'
-     };
-
-     sideNav = {
-       'background-color':'#fff',
-       
-        'height': '50px',
-        'width': '200px',
-        'margin-top':'-1px',
-        'border-right':'1px solid lightgray',
-        'border-bottom':'1px solid lightgray',
-        'border-top': '1px solid lightgray' ,
-        'display':'block'  
-     }; 
-
-     sideNavActive = {
-       'background-color':'rgb(243,243,243)',
-       'height': '50px',
-        'width': '200px',
-      
-        'border-left': '4px solid #8BC34A',
-
-        'display':'block'
-     };
-
-   sideNavI = {
-     'margin-right':'10px',
-     
-   };
-
-   //View Org 
+ 
    mainPage = {
      'height': '500px',
      'width':'80%',
@@ -125,21 +124,13 @@ export class App {
      'margin-top':'20px',
      'margin-left': '-30px',
      'border': '1px solid lightgray',
-  
-     'border-radius': '3px'
+     'border-top':'none',
+     'padding-top':'15px',
+     'border-radius': '2px',
+     'margin-top': '7px',
+     'z-index':'-1'
    }
-
-   navHeaderActive = {
-     'height': '50px',
-     'width': '150px',
-     'background-color': '#fff',
-     'border':'none',
-     'border-left': '2px solid lightgray',
-    'box-shadow': '0 10px lightgray',
-     'margin-right': '20px',
-     'outline':'none'
-
-   }    
+   
 }
 
 

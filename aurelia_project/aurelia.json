@@ -132,7 +132,18 @@
             "path": "../node_modules/aurelia-testing/dist/amd",
             "main": "aurelia-testing",
             "env": "dev"
-          }
+          },
+    
+          "velocity-animate",
+          "tether",
+{
+  "name": "aurelia-bootstrap",
+  "path": "../node_modules/aurelia-bootstrap/dist/amd",
+  "main": "index",
+  "resources": [
+    "**/*.html"
+  ]
+}
         ]
       }
     ]

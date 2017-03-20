@@ -1,0 +1,110 @@
+body {
+  overflow-x: hidden;
+}
+
+h4 {
+  color: darkslategray;
+  margin-left: 50px;
+}
+
+.createForm {
+ margin-top: 20px;
+}
+
+
+
+.formInput {
+  height: 25px;
+  font-size: 1em;
+  width: 200px;
+}
+
+
+
+.sideBtn {
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+  outline: none;
+  margin-top: -0.5px;
+  color: darkslategray;
+  text-align: left;
+}
+
+
+.sideBtn:active {
+     background-color: rgb(243,243,243);
+
+}
+
+
+.sideBtn:focus {
+    background-color: rgb(243,243,243);
+    border-left: 4px solid #8BC34A;
+}
+
+.sideNavI {
+  color: darkslategray;
+  font-size: 1.2em;
+  margin-right: 5px;
+  margin-left: 40px;
+}
+
+.sideNavTable td {
+    margin: 0 0;
+}
+
+
+
+#bell {
+
+  color: #fff;
+  background-color:orange;
+  border-radius: 100%;
+  height: 30px;
+  width: 31px;
+  margin-top: 10px;
+  padding-top: 6px;
+  margin-right: 10px;
+}
+
+#emptyNav {
+    background-color: #fff;
+       height: 110px;
+       width: 100%;
+       border-bottom: 1px solid lightgray;
+}
+
+
+  .messages {
+       color: darkslategray;
+       font-size: 1.2em;
+       text-align: center;
+       width: 200px;
+       background-color: #fff;
+       border-top: none;
+       margin-top: -8px;
+       height: 50px;
+       border-right: 1px solid lightgray;
+       border-bottom: 0.5px solid lightgray;
+          
+    
+     }
+
+   #sideNav {
+       background-color:#fff;     
+        height: 650px;
+        width: 199px;
+        margin-top: 0px;
+ 
+        border-top: 1px solid lightgray;
+        display:block; 
+ 
+
+     }; 
+
+
+     
+
+

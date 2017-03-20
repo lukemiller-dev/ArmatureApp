@@ -1,26 +1,17 @@
 <template>
+	<require from="styles/styles.css"></require>
+	<require from="styles/app.css"></require>
+	  <require from="bootstrap-3.3.7-dist/css/bootstrap.css"></require>
+
     <div class="col-md-2"></div>
     <div class="col-md-10">
         <div css.bind="mainPage">
-            	<ul style>
-         <li style="
-         display: inline;
-         margin-right:20px;
-        
-         " repeat.for = "row of router.navigation">
-         <button css.bind="navHeaderActive">
-            <a href.bind = "row.href">${row.title}</a>
-         </button>
-         </li>
-
-          
-       
-      </ul>
-    <h1>${heading2}</h1>
+      
+    <h4>${createH}</h2>
    
 
-       <form submit.trigger="addOrg()">
-        <input type="text" placeholder="Name" value.bind="orgName">
+       <form class="createForm" submit.trigger="addOrg()">
+        <input class="formInput" type="text" placeholder="Name" value.bind="orgName">
         <br>
         <br>
         <input type="text" placeholder="Address line 1" value.bind="orgAddress">

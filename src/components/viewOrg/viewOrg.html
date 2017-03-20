@@ -1,22 +1,18 @@
 <template>
+	<require from="styles/styles.css"></require>
+    <require from="styles/app.css"></require>
+      <require from="bootstrap-3.3.7-dist/css/bootstrap.css"></require>
+
+
     <div class="col-md-2"></div>
     <div class="col-md-10">
         <div css.bind="mainPage">
         
-            	<ul style="padding:0">
-         <li style="display: inline">
-             
-            <a href="/#/viewOrg">View Organization</a>
-              </button>
-              <button css.bind="navHeaderActive">
-            <a href="/#/createOrg">Create Organization</a>
-              </button>
-         </li>    
-      </ul>
-    <h2>${heading}</h2>
+ 
+   
 
      <ul>
-        <li id="element" repeat.for="organization of organizations">
+        <li id="storage" repeat.for="organization of storage">
             ${organization.name}
             <br>
             ${organization.address}
@@ -27,8 +23,13 @@
             <br>
             <button click.trigger="removeOrg(organization)">Remove</button>
         </li>
+
+        
     </ul>
 
         </div>
+    </div>
+
+    <div class="testDiv">
     </div>
 </template>

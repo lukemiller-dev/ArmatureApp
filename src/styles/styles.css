@@ -1,12 +1,66 @@
 body {
-    background-color: blue;
+   margin: 0;
 }
 
-.myElement {
-   width:100px;
-   height: 100px;
-   border:1px solid blue;
+.optionBtn {
+ padding: 20px 75px;
+  width: 300px;
+  color: #fff;
+  background-color: #8BC34A;
+  border:none;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 2px;
+  
+  margin-right: 5px;
+} 
+
+.optionBtn:active,
+.optionBtn.active {
+  
+background-color: #fff;
+color: lightslategray;
 }
+
+.optionBtn:hover {
+
+background-color: #fff;
+color: lightslategray;
+}
+
+.optionBtn:focus,
+.optionBtn.focus {
+
+background-color: #fff;
+color: lightslategray;
+text-decoration: none;
+
+}
+
+.optionList {
+  padding: 0;
+  margin-top: 50px;
+  margin-left: -30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+ 
+
+
 
 
 

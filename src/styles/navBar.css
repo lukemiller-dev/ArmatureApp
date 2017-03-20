@@ -1,0 +1,40 @@
+#mainNav {
+    z-index: 2;
+    height:60px; 
+    width:100%;
+    background-color: #8BC34A;
+    margin-top: 0;
+}
+
+
+#user {
+  color: #fff;
+  font-size: 40px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+
+ 
+
+  .userNav {
+    margin-top: -200px;
+    transition: 0.8s;
+      height: 200px;
+  background-color: #fff;
+  width: 200px;
+  float: right;
+  z-index: -2;
+  border: 1px solid #8BC34A;
+  margin-right: -110px; 
+ 
+}
+
+
+
+.userNavActive {
+  margin-top: 60px;
+};
+
+
