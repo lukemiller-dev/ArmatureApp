@@ -11,8 +11,8 @@
  
    
 
-     <ul>
-        <li id="storage" repeat.for="organization of storage">
+     <ul class="viewList">
+        <li id="storage" repeat.for="organization of organizations">
             ${organization.name}
             <br>
             ${organization.address}
@@ -21,10 +21,8 @@
             ${organization.state}
             ${organization.zipCode}
             <br>
-            <button click.trigger="removeOrg(organization)">Remove</button>
+            <button class="removeBtn" click.trigger="removeOrg(organization)">Remove</button>
         </li>
-
-        
     </ul>
 
         </div>

@@ -23,7 +23,7 @@ export class App {
   }
 
 //AddNRemoveOrg
-     constructor() {
+   constructor() {
         this.viewH = "View Organization";
         this.createH ="Create an new Organization";
         this.heading3 = "View Organization2";
@@ -34,11 +34,11 @@ export class App {
         this.orgCity = '';
         this.orgState = '';
         this.orgZipCode = '';
-        this.storage = [];
+    
 
            for (var i = 0; i < localStorage.length; i++){
                         var output = localStorage.getItem(localStorage.key(i));
-                       this.storage = JSON.parse(output);
+                        this.organizations = JSON.parse(output);
 
                         
                     }
@@ -74,7 +74,11 @@ export class App {
            localStorage.setItem("organizations", inLSstring);
              
                
-
+ for (var i = 0; i < localStorage.length; i++){
+                        var output = localStorage.getItem(localStorage.key(i));
+                       this.organizations = JSON.parse(output);
+                        
+                    }
                   
 
              this.orgName = '';
@@ -92,10 +96,26 @@ export class App {
 
     
     
-     removeOrg(organization) {
-         let index = this.organizations.indexOf(organization);
+    
+     removeOrg(newStorage) {
+         let index = this.organizations.indexOf(newStorage);
          if(index !== -1) {
+           
+            let key = localStorage.getItem("organizations");
+            let parseKey = JSON.parse(key);
              this.organizations.splice(index, 1);
+
+         /*   for(var i = 0; i < parseKey.length; i++) {
+              if(parseKey[index] == storage) {
+                parseKey.splice(storage, 1);
+                break;
+              }
+            } */
+
+              let newString = JSON.stringify(this.organizations);
+              localStorage.setItem("organizations", newString);
+
+              location.reload();
          }
      } 
 
@@ -118,7 +138,7 @@ export class App {
 
  
    mainPage = {
-     'height': '500px',
+     'height': 'auto',
      'width':'80%',
      'background-color': 'white',
      'margin-top':'20px',

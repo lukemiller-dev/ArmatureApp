@@ -11,20 +11,21 @@
    
 
        <form class="createForm" submit.trigger="addOrg()">
+		
         <input class="formInput" type="text" placeholder="Name" value.bind="orgName">
         <br>
         <br>
-        <input type="text" placeholder="Address line 1" value.bind="orgAddress">
+        <input class="formInput" type="text" placeholder="Address line 1" value.bind="orgAddress">
         <br>
         <br>
-        <input type="text" placeholder="Address line 2" value.bind="orgAddress2">
+        <input class="formInput" type="text" placeholder="Address line 2" value.bind="orgAddress2">
 
         <br>
         <br>
 
-        <input type="text" placeholder="city" value.bind="orgCity">
-        <select value.bind="orgState">
-    <option value='Not Defined'></option>
+        <input class="formInput" type="text" placeholder="City" value.bind="orgCity">
+        <select id="stateSelect" class="formInput" value.bind="orgState">
+    <option value='Not Defined'>Select State</option>
 	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
 	<option value="AZ">Arizona</option>
@@ -78,10 +79,11 @@
 	<option value="WY">Wyoming</option>
 </select>	
 
-<input type="text" placeholder="Zip Code" value.bind="orgZipCode">	
+<input id="zipCode" class="formInput" type="text" placeholder="Zip Code" value.bind="orgZipCode">	
 <br><br>		
 				
-        <button onclick="location.href='/#/viewOrg'" type="submit">Add</button>
+        <button id="saveBtn" onclick="location.href='/#/viewOrg'" type="submit">Save</button>
+		<button id="cancelBtn" onclick="location.href='/#/viewOrg'">Cancel</button>
     </form>
         </div>
 </div>
