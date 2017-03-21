@@ -1,12 +1,13 @@
-body {
-   margin: 0;
+body,html {
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .optionBtn {
  padding: 20px 75px;
   width: 300px;
   color: #fff;
-  background-color: #c0e19d;
+  background-color: #a7d576;
   border:none;
   text-align: center;
   margin-top: 20px;
@@ -48,6 +49,7 @@ text-decoration: none;
   color: darkslategray;
   font-size: 1.2em;
   margin-top: 30px;
+  margin-left: 20px;
 }
 
 .removeBtn {
@@ -59,7 +61,8 @@ text-decoration: none;
   border-radius: 5px;
   font-size: 0.8em;
 }
-
+    
+ 
 
 
 

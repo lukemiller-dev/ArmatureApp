@@ -24,8 +24,8 @@ export class App {
 
 //AddNRemoveOrg
    constructor() {
-        this.viewH = "View Organization";
-        this.createH ="Create an new Organization";
+        this.viewH = "Organizations";
+        this.createH ="Create a new Organization";
         this.heading3 = "View Organization2";
         this.organizations = [];
         this.orgName = '';
